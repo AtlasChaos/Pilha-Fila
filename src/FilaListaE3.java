@@ -17,7 +17,7 @@ public class FilaListaE3<T> extends FilaListaEncadeada<T> {
     @Override
     public Fila<T> concatenar(Fila outra) throws Exception {
         
-        ElementoLista<T> andarilho = this.ini;
+        /* ElementoLista<T> andarilho = this.ini;
 
         FilaListaEncadeada<T> newQueue = new FilaListaE3();
 
@@ -43,9 +43,7 @@ public class FilaListaE3<T> extends FilaListaEncadeada<T> {
                 
         }
         
-        System.out.println("FilaListaE3.concatenar()");
-        
-        
+      */
         
         
         
