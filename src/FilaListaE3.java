@@ -4,7 +4,7 @@ public class FilaListaE3<T> extends FilaListaEncadeada<T> {
     @Override
     public String toString() {
 
-        ElementoLista andarilho = ini;
+        ElementoLista<T> andarilho = ini;
         String str = "[ ";
         while (andarilho != null) {
             str += andarilho.getInfo() + ", ";
@@ -16,16 +16,16 @@ public class FilaListaE3<T> extends FilaListaEncadeada<T> {
 
     @Override
     public Fila<T> concatenar(Fila outra) throws Exception {
-        
-        /* ElementoLista<T> andarilho = this.ini;
 
-        FilaListaEncadeada<T> newQueue = new FilaListaE3();
+        Fila<T> filaListaEncadeada = new FilaListaE3<>();
+        ElementoLista<T> andarilho = this.ini;
 
         while (andarilho != null) {
-            newQueue.insere((T) andarilho.getInfo());
-            andarilho.getProx();
+            filaListaEncadeada.insere((T) andarilho.getInfo());
+            andarilho = andarilho.getProx();
         }
-        if (outra instanceof FilaListaEncadeada) {
+
+        /*if (outra instanceof FilaListaEncadeada) {
 
             andarilho = ((FilaListaEncadeada<T>) outra).ini;
 
@@ -41,16 +41,10 @@ public class FilaListaE3<T> extends FilaListaEncadeada<T> {
                 
             }
                 
-        }
-        
-      */
-        
-        
-        
-        
-        
-        
-        return null;
+        }*/
+        filaListaEncadeada.insere((T) outra);
+
+        return filaListaEncadeada;
 
     }
 
