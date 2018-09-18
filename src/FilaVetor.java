@@ -1,5 +1,4 @@
 
-
 public abstract class FilaVetor<T> implements Fila<T> {
 
     int inicio;
@@ -11,12 +10,11 @@ public abstract class FilaVetor<T> implements Fila<T> {
         this.tam = tam;
         this.reseta();
     }
-    
-    
+
     public void reseta() {
         this.qtdElem = 0;
         this.inicio = 0;
-        this.vet = (T[]) new Object[tam];        
+        this.vet = (T[]) new Object[tam];
     }
 
     @Override
@@ -28,11 +26,11 @@ public abstract class FilaVetor<T> implements Fila<T> {
             inicio = 0;
             vet[0] = v;
 
-            return;
+        } else {
+            int fim = (qtdElem + inicio) % tam;
+            qtdElem++;
+            vet[fim] = v;
         }
-        int fim = (qtdElem + inicio) % tam;
-        qtdElem++;
-        vet[fim] = v;
     }
 
     @Override
@@ -56,7 +54,6 @@ public abstract class FilaVetor<T> implements Fila<T> {
         this.reseta();
     }
 
-    
     public boolean isFull() {
         return qtdElem == tam;
     }

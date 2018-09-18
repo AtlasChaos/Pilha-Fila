@@ -48,7 +48,7 @@ public class TesteMain {
         f2.insere(str6);
         f2.insere(str7);
         
-        f6 = (FilaVetorE3) f4.concatenar(f5);
+        f6 = (FilaVetorE3) f4.concatenar(f1);
         
         System.out.println("FilaVetor1.main()" + f4.toString());
         System.out.println("FilaVetor2.main()" + f5.toString());
